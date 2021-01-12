@@ -2,11 +2,14 @@
 
 # cfg_name=(BasketballPass SlideEditing)
 # cfg_name_alphabet_all=(BasketballDrill BlowingBubbles Cactus Kimono PartyScene SlideEditing Vidyo1 BasketballDrillText BQMall ChinaSpeed KristenAndSara PeopleOnStreet SlideShow Vidyo3 BasketballDrive BQSquare FourPeople RaceHorsesC Vidyo4 BasketballPass BQTerrace Johnny ParkScene RaceHorses Traffic)
-cfg_name=(
-    PeopleOnStreet Traffic 
-BasketballDrive BQTerrace Cactus Kimono ParkScene BasketballDrill BQMall PartyScene RaceHorsesC BasketballPass BlowingBubbles BQSquare RaceHorses FourPeople Johnny KristenAndSara BasketballDrillText ChinaSpeed SlideEditing SlideShow)
+# cfg_name=(
+#     PeopleOnStreet Traffic 
+# BasketballDrive BQTerrace Cactus Kimono ParkScene BasketballDrill BQMall PartyScene RaceHorsesC BasketballPass BlowingBubbles BQSquare RaceHorses FourPeople Johnny KristenAndSara BasketballDrillText ChinaSpeed SlideEditing SlideShow)
 
-test_1_frame=1
+cfg_name=(
+    BasketballPass BlowingBubbles BQSquare RaceHorses )
+
+test_1_frame=0
 if [ $test_1_frame -eq 1 ]; then
     para="--FramesToBeEncoded=1"
     # para="--FramesToBeEncoded=200"

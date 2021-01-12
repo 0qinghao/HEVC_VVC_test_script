@@ -1,19 +1,17 @@
 #!/usr/bin/perl
 @cfg_list = (
-    PeopleOnStreet,      Traffic,
-    BasketballDrive,     BQTerrace,
-    Cactus,              Kimono,
-    ParkScene,           BasketballDrill,
-    BQMall,              PartyScene,
-    RaceHorsesC,         BasketballPass,
-    BlowingBubbles,      BQSquare,
-    RaceHorses,          FourPeople,
-    Johnny,              KristenAndSara,
-    BasketballDrillText, ChinaSpeed,
-    SlideEditing,        SlideShow
+
+    # PeopleOnStreet,      Traffic,
+    # BasketballDrive,     BQTerrace,
+    # Cactus,              Kimono,
+    # ParkScene,           BasketballDrill,
+    # BQMall,              PartyScene,
+    BasketballPass,
+    BlowingBubbles, BQSquare,
+    RaceHorses
 );
 
-@cfg_list = ( BasketballPass, SlideEditing );
+# @cfg_list = ( BasketballPass, SlideEditing );
 
 # @dir_list = ( "./bin_src/", "./bin_LBonly/", "./bin_LPonly/", "./bin_LBLP/" );
 # @app_list = ( "_src.log",   "_LBonly.log",   "_LPonly.log",   "_LBLP.log" );
