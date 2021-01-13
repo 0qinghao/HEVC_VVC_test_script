@@ -6,10 +6,10 @@ cfg_name=(
     PeopleOnStreet Traffic 
 BasketballDrive BQTerrace Cactus Kimono ParkScene BasketballDrill BQMall PartyScene RaceHorsesC BasketballPass BlowingBubbles BQSquare RaceHorses FourPeople Johnny KristenAndSara BasketballDrillText ChinaSpeed SlideEditing SlideShow)
 
-test_1_frame=0
+test_1_frame=1
 if [ $test_1_frame -eq 1 ]; then
-    # para="--FramesToBeEncoded=1"
-    para="--FramesToBeEncoded=200"
+    para="--FramesToBeEncoded=10"
+    # para="--FramesToBeEncoded=200"
 else
     para=""
 fi
@@ -33,15 +33,15 @@ done
 
 wait
 
-for i in "${!cfg_name[@]}";
-do
-    echo "Decoding "${cfg_name[$i]}
-    cd $basedir/bin_src
-    ./TAppDecoderStatic -b ./${cfg_name[$i]}.bin -o ${cfg_name[$i]}_dec.yuv > ./${cfg_name[$i]}_dec_src.log
-    # cd $basedir/bin_LBonly
-    # ./TAppDecoderStatic -b ./${cfg_name[$i]}.bin -o ${cfg_name[$i]}_dec.yuv > ./${cfg_name[$i]}_dec_LBonly.log
-    # cd $basedir/bin_LPonly
-    # ./TAppDecoderStatic -b ./${cfg_name[$i]}.bin -o ${cfg_name[$i]}_dec.yuv > ./${cfg_name[$i]}_dec_LPonly.log
-    # cd $basedir/bin_LBLP
-    # ./TAppDecoderStatic -b ./${cfg_name[$i]}.bin -o ${cfg_name[$i]}_dec.yuv > ./${cfg_name[$i]}_dec_LBLP.log
-done
+# for i in "${!cfg_name[@]}";
+# do
+#     echo "Decoding "${cfg_name[$i]}
+#     cd $basedir/bin_src
+#     ./TAppDecoderStatic -b ./${cfg_name[$i]}.bin -o ${cfg_name[$i]}_dec.yuv > ./${cfg_name[$i]}_dec_src.log
+#     # cd $basedir/bin_LBonly
+#     # ./TAppDecoderStatic -b ./${cfg_name[$i]}.bin -o ${cfg_name[$i]}_dec.yuv > ./${cfg_name[$i]}_dec_LBonly.log
+#     # cd $basedir/bin_LPonly
+#     # ./TAppDecoderStatic -b ./${cfg_name[$i]}.bin -o ${cfg_name[$i]}_dec.yuv > ./${cfg_name[$i]}_dec_LPonly.log
+#     # cd $basedir/bin_LBLP
+#     # ./TAppDecoderStatic -b ./${cfg_name[$i]}.bin -o ${cfg_name[$i]}_dec.yuv > ./${cfg_name[$i]}_dec_LBLP.log
+# done
