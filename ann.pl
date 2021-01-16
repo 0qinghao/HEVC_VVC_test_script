@@ -19,8 +19,13 @@
 # @app_list = ( "_src.log",   "_LBonly.log",   "_LPonly.log",   "_LBLP.log" );
 # @dir_list = ( "./bin_src/", "./bin_LBonly/" );
 # @app_list = ( "_src.log",   "_LBonly.log" );
-@dir_list = ("./bin_src/");
-@app_list = ("_src.log");
+@dir_list = ( "./bin_src/", "./bin_LBLP/" );
+@app_list = ( "_src.log",   "_LBLP.log" );
+
+# @dir_list = ("./bin_src/");
+# @app_list = ("_src.log");
+# @dir_list = ("./bin_LBLP/");
+# @app_list = ("_LBLP.log");
 
 foreach $index ( 0 .. $#{dir_list} ) {
     open( my $logfile, ">", $dir_list[$index] . $app_list[$index] . ".csv" );
