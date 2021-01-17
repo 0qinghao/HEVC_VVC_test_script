@@ -15,12 +15,13 @@
 
 # @cfg_list = ( BasketballPass, SlideEditing );
 
-# @dir_list = ( "./bin_src/", "./bin_LBonly/", "./bin_LPonly/", "./bin_LBLP/" );
-# @app_list = ( "_src.log",   "_LBonly.log",   "_LPonly.log",   "_LBLP.log" );
+@dir_list = ( "./bin_src/", "./bin_LBonly/", "./bin_LPonly/", "./bin_LBLP/" );
+@app_list = ( "_src.log",   "_LBonly.log",   "_LPonly.log",   "_LBLP.log" );
+
 # @dir_list = ( "./bin_src/", "./bin_LBonly/" );
 # @app_list = ( "_src.log",   "_LBonly.log" );
-@dir_list = ( "./bin_src/", "./bin_LBLP/" );
-@app_list = ( "_src.log",   "_LBLP.log" );
+# @dir_list = ( "./bin_src/", "./bin_LBLP/" );
+# @app_list = ( "_src.log",   "_LBLP.log" );
 
 # @dir_list = ("./bin_src/");
 # @app_list = ("_src.log");
