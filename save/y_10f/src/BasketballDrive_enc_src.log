@@ -31,7 +31,7 @@ TOOL CFG: IBD:0 HAD:0 RDQ:0 RDQTS:0 RDpenalty:0 SQP:0 ASR:0 FEN:0 ECU:0 FDM:0 CF
 
 POC    0 TId: 0 ( I-SLICE, QP 26 )    8254080 bits [Y 99.9900 dB    U 7.2747 dB    V 4.7877 dB] [ET    24 ] [L0 ] [L1 ]
 POC    1 TId: 0 ( I-SLICE, QP 26 )    8239840 bits [Y 99.9900 dB    U 7.2683 dB    V 4.7935 dB] [ET    24 ] [L0 ] [L1 ]
-POC    2 TId: 0 ( I-SLICE, QP 26 )    8230776 bits [Y 99.9900 dB    U 7.2646 dB    V 4.7814 dB] [ET    24 ] [L0 ] [L1 ]
+POC    2 TId: 0 ( I-SLICE, QP 26 )    8230776 bits [Y 99.9900 dB    U 7.2646 dB    V 4.7814 dB] [ET    25 ] [L0 ] [L1 ]
 POC    3 TId: 0 ( I-SLICE, QP 26 )    8224184 bits [Y 99.9900 dB    U 7.2471 dB    V 4.7694 dB] [ET    24 ] [L0 ] [L1 ]
 POC    4 TId: 0 ( I-SLICE, QP 26 )    8242464 bits [Y 99.9900 dB    U 7.2334 dB    V 4.7567 dB] [ET    24 ] [L0 ] [L1 ]
 POC    5 TId: 0 ( I-SLICE, QP 26 )    8254584 bits [Y 99.9900 dB    U 7.2209 dB    V 4.7465 dB] [ET    24 ] [L0 ] [L1 ]
@@ -63,4 +63,4 @@ B Slices--------------------------------------------------------
 RVM: 0.000
 Bytes written to file: 10306734 (412269.360 kbps)
 
- Total Time:      242.320 sec.
+ Total Time:      243.240 sec.

@@ -31,14 +31,14 @@ TOOL CFG: IBD:0 HAD:0 RDQ:0 RDQTS:0 RDpenalty:0 SQP:0 ASR:0 FEN:0 ECU:0 FDM:0 CF
 
 POC    0 TId: 0 ( I-SLICE, QP 26 )   16389800 bits [Y 99.9900 dB    U 6.2146 dB    V 5.9369 dB] [ET    48 ] [L0 ] [L1 ]
 POC    1 TId: 0 ( I-SLICE, QP 26 )   16393096 bits [Y 99.9900 dB    U 6.2139 dB    V 5.9369 dB] [ET    48 ] [L0 ] [L1 ]
-POC    2 TId: 0 ( I-SLICE, QP 26 )   16393608 bits [Y 99.9900 dB    U 6.2132 dB    V 5.9374 dB] [ET    48 ] [L0 ] [L1 ]
+POC    2 TId: 0 ( I-SLICE, QP 26 )   16393608 bits [Y 99.9900 dB    U 6.2132 dB    V 5.9374 dB] [ET    49 ] [L0 ] [L1 ]
 POC    3 TId: 0 ( I-SLICE, QP 26 )   16388600 bits [Y 99.9900 dB    U 6.2127 dB    V 5.9380 dB] [ET    48 ] [L0 ] [L1 ]
 POC    4 TId: 0 ( I-SLICE, QP 26 )   16399056 bits [Y 99.9900 dB    U 6.2122 dB    V 5.9379 dB] [ET    48 ] [L0 ] [L1 ]
-POC    5 TId: 0 ( I-SLICE, QP 26 )   16393808 bits [Y 99.9900 dB    U 6.2113 dB    V 5.9387 dB] [ET    48 ] [L0 ] [L1 ]
+POC    5 TId: 0 ( I-SLICE, QP 26 )   16393808 bits [Y 99.9900 dB    U 6.2113 dB    V 5.9387 dB] [ET    49 ] [L0 ] [L1 ]
 POC    6 TId: 0 ( I-SLICE, QP 26 )   16393624 bits [Y 99.9900 dB    U 6.2111 dB    V 5.9390 dB] [ET    48 ] [L0 ] [L1 ]
 POC    7 TId: 0 ( I-SLICE, QP 26 )   16395560 bits [Y 99.9900 dB    U 6.2108 dB    V 5.9393 dB] [ET    48 ] [L0 ] [L1 ]
 POC    8 TId: 0 ( I-SLICE, QP 26 )   16395584 bits [Y 99.9900 dB    U 6.2109 dB    V 5.9399 dB] [ET    48 ] [L0 ] [L1 ]
-POC    9 TId: 0 ( I-SLICE, QP 26 )   16395184 bits [Y 99.9900 dB    U 6.2106 dB    V 5.9404 dB] [ET    48 ] [L0 ] [L1 ]
+POC    9 TId: 0 ( I-SLICE, QP 26 )   16395184 bits [Y 99.9900 dB    U 6.2106 dB    V 5.9404 dB] [ET    47 ] [L0 ] [L1 ]
 
 
 SUMMARY --------------------------------------------------------
@@ -63,4 +63,4 @@ B Slices--------------------------------------------------------
 RVM: 0.000
 Bytes written to file: 20492291 (491814.984 kbps)
 
- Total Time:      482.230 sec.
+ Total Time:      482.440 sec.

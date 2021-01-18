@@ -29,7 +29,7 @@ Max Num Merge Candidates     : 5
 
 TOOL CFG: IBD:0 HAD:0 RDQ:0 RDQTS:0 RDpenalty:0 SQP:0 ASR:0 FEN:0 ECU:0 FDM:0 CFM:0 ESD:0 RQT:1 TransformSkip:0 TransformSkipFast:0 Slice: M=0 SliceSegment: M=0 CIP:0 SAO:0 PCM:0 TransQuantBypassEnabled: =1 WPP:0 WPB:0 PME:2  WaveFrontSynchro:0 WaveFrontSubstreams:1 ScalingList:0 TMVPMode:1  SignBitHidingFlag:1 RecalQP:0
 
-POC    0 TId: 0 ( I-SLICE, QP 26 )    1828392 bits [Y 99.9900 dB    U -2.2571 dB    V -10.4421 dB] [ET     5 ] [L0 ] [L1 ]
+POC    0 TId: 0 ( I-SLICE, QP 26 )    1828392 bits [Y 99.9900 dB    U -1.2450 dB    V -10.4383 dB] [ET     5 ] [L0 ] [L1 ]
 POC    1 TId: 0 ( I-SLICE, QP 26 )    1830048 bits [Y 99.9900 dB    U 6.5631 dB    V 5.4837 dB] [ET     5 ] [L0 ] [L1 ]
 POC    2 TId: 0 ( I-SLICE, QP 26 )    1829632 bits [Y 99.9900 dB    U 6.5603 dB    V 5.4779 dB] [ET     5 ] [L0 ] [L1 ]
 POC    3 TId: 0 ( I-SLICE, QP 26 )    1827912 bits [Y 99.9900 dB    U 6.5563 dB    V 5.4817 dB] [ET     5 ] [L0 ] [L1 ]
@@ -43,12 +43,12 @@ POC    9 TId: 0 ( I-SLICE, QP 26 )    1820480 bits [Y 99.9900 dB    U 6.5528 dB 
 
 SUMMARY --------------------------------------------------------
 	Total Frames |  Bitrate    Y-PSNR    U-PSNR    V-PSNR 
-	       10    a 109516.8960   99.9900    5.6757    3.8913
+	       10    a 109516.8960   99.9900    5.7769    3.8917
 
 
 I Slices--------------------------------------------------------
 	Total Frames |  Bitrate    Y-PSNR    U-PSNR    V-PSNR 
-	       10    i 109516.8960   99.9900    5.6757    3.8913
+	       10    i 109516.8960   99.9900    5.7769    3.8917
 
 
 P Slices--------------------------------------------------------
@@ -63,4 +63,4 @@ B Slices--------------------------------------------------------
 RVM: 0.000
 Bytes written to file: 2281653 (109519.344 kbps)
 
- Total Time:       47.550 sec.
+ Total Time:       46.980 sec.
