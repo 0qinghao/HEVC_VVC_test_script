@@ -7,7 +7,7 @@ Reconstruction File          : RaceHorses.yuv
 Real     Format              : 416x240 30Hz
 Internal Format              : 416x240 30Hz
 Frame/Field                  : Frame based coding
-Frame index                  : 0 - 9 (10 frames)
+Frame index                  : 0 - 0 (1 frames)
 CU size / depth              : 32 / 3
 RQT trans. size (min / max)  : 4 / 32
 Max RQT depth inter          : 3
@@ -33,31 +33,13 @@ TOOL CFG: IBD:0 HAD:0 RDQ:0 RDQTS:0 RDpenalty:0 SQP:0 ASR:0 FEN:0 ECU:0 FDM:0 CF
 ***    SPS numBytesInNALunit: 30
 ***    PPS numBytesInNALunit: 7
 *** IDR_W_RADL numBytesInNALunit: 80216
-POC    0 TId: 0 ( I-SLICE, QP 26 )     642216 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  2.00 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 79648
-POC    1 TId: 0 ( I-SLICE, QP 26 )     637184 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  2.09 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 79016
-POC    2 TId: 0 ( I-SLICE, QP 26 )     632128 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  2.05 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 78702
-POC    3 TId: 0 ( I-SLICE, QP 26 )     629616 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  2.12 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 78744
-POC    4 TId: 0 ( I-SLICE, QP 26 )     629952 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  2.03 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 78648
-POC    5 TId: 0 ( I-SLICE, QP 26 )     629184 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  2.14 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 78734
-POC    6 TId: 0 ( I-SLICE, QP 26 )     629872 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  2.12 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 79110
-POC    7 TId: 0 ( I-SLICE, QP 26 )     632880 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  2.10 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 79341
-POC    8 TId: 0 ( I-SLICE, QP 26 )     634728 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  2.05 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 79145
-POC    9 TId: 0 ( I-SLICE, QP 26 )     633160 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  2.08 ] [L0 ] [L1 ]
+POC    0 TId: 0 ( I-SLICE, QP 26 )     642216 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  0.87 ] [L0 ] [L1 ]
 
 
 I Slices--------------------------------------------------------
 	Total Frames |  Bitrate    Y-PSNR    U-PSNR    V-PSNR 
-	       10    i  18992.7600   99.9900   99.9900   99.9900
-Bytes written to file: 791416 (18993.984 kbps)
-Bytes for SPS/PPS/Slice (Incl. Annex B): 791416 (18993.984 kbps)
+	        1    i  19266.4800   99.9900   99.9900   99.9900
+Bytes written to file: 80292 (19270.080 kbps)
+Bytes for SPS/PPS/Slice (Incl. Annex B): 80292 (19270.080 kbps)
 
- Total Time:       20.830 sec.
+ Total Time:        0.870 sec.

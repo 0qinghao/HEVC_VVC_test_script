@@ -7,7 +7,7 @@ Reconstruction File          : BasketballPass.yuv
 Real     Format              : 416x240 50Hz
 Internal Format              : 416x240 50Hz
 Frame/Field                  : Frame based coding
-Frame index                  : 0 - 9 (10 frames)
+Frame index                  : 0 - 0 (1 frames)
 CU size / depth              : 32 / 3
 RQT trans. size (min / max)  : 4 / 32
 Max RQT depth inter          : 3
@@ -33,31 +33,13 @@ TOOL CFG: IBD:0 HAD:0 RDQ:0 RDQTS:0 RDpenalty:0 SQP:0 ASR:0 FEN:0 ECU:0 FDM:0 CF
 ***    SPS numBytesInNALunit: 30
 ***    PPS numBytesInNALunit: 7
 *** IDR_W_RADL numBytesInNALunit: 70291
-POC    0 TId: 0 ( I-SLICE, QP 26 )     562816 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  1.71 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 70402
-POC    1 TId: 0 ( I-SLICE, QP 26 )     563216 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  1.77 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 70496
-POC    2 TId: 0 ( I-SLICE, QP 26 )     563968 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  1.74 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 70350
-POC    3 TId: 0 ( I-SLICE, QP 26 )     562800 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  1.77 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 70244
-POC    4 TId: 0 ( I-SLICE, QP 26 )     561952 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  1.78 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 70229
-POC    5 TId: 0 ( I-SLICE, QP 26 )     561832 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  1.75 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 70028
-POC    6 TId: 0 ( I-SLICE, QP 26 )     560224 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  1.75 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 69958
-POC    7 TId: 0 ( I-SLICE, QP 26 )     559664 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  1.82 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 69675
-POC    8 TId: 0 ( I-SLICE, QP 26 )     557400 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  1.75 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 69474
-POC    9 TId: 0 ( I-SLICE, QP 26 )     555792 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  1.77 ] [L0 ] [L1 ]
+POC    0 TId: 0 ( I-SLICE, QP 26 )     562816 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  0.71 ] [L0 ] [L1 ]
 
 
 I Slices--------------------------------------------------------
 	Total Frames |  Bitrate    Y-PSNR    U-PSNR    V-PSNR 
-	       10    i  28048.3200   99.9900   99.9900   99.9900
-Bytes written to file: 701259 (28050.360 kbps)
-Bytes for SPS/PPS/Slice (Incl. Annex B): 701259 (28050.360 kbps)
+	        1    i  28140.8000   99.9900   99.9900   99.9900
+Bytes written to file: 70367 (28146.800 kbps)
+Bytes for SPS/PPS/Slice (Incl. Annex B): 70367 (28146.800 kbps)
 
- Total Time:       17.660 sec.
+ Total Time:        0.710 sec.

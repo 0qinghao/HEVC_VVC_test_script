@@ -7,7 +7,7 @@ Reconstruction File          : PartyScene.yuv
 Real     Format              : 832x480 50Hz
 Internal Format              : 832x480 50Hz
 Frame/Field                  : Frame based coding
-Frame index                  : 0 - 9 (10 frames)
+Frame index                  : 0 - 0 (1 frames)
 CU size / depth              : 32 / 3
 RQT trans. size (min / max)  : 4 / 32
 Max RQT depth inter          : 3
@@ -33,31 +33,13 @@ TOOL CFG: IBD:0 HAD:0 RDQ:0 RDQTS:0 RDpenalty:0 SQP:0 ASR:0 FEN:0 ECU:0 FDM:0 CF
 ***    SPS numBytesInNALunit: 30
 ***    PPS numBytesInNALunit: 7
 *** IDR_W_RADL numBytesInNALunit: 373104
-POC    0 TId: 0 ( I-SLICE, QP 26 )    2985320 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  9.47 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 373105
-POC    1 TId: 0 ( I-SLICE, QP 26 )    2984840 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  9.48 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 373105
-POC    2 TId: 0 ( I-SLICE, QP 26 )    2984840 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  9.57 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 372605
-POC    3 TId: 0 ( I-SLICE, QP 26 )    2980840 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  9.72 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 372035
-POC    4 TId: 0 ( I-SLICE, QP 26 )    2976280 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  9.56 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 371784
-POC    5 TId: 0 ( I-SLICE, QP 26 )    2974272 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  9.69 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 371252
-POC    6 TId: 0 ( I-SLICE, QP 26 )    2970016 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  9.80 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 371585
-POC    7 TId: 0 ( I-SLICE, QP 26 )    2972680 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  9.62 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 371518
-POC    8 TId: 0 ( I-SLICE, QP 26 )    2972144 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  9.72 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 371336
-POC    9 TId: 0 ( I-SLICE, QP 26 )    2970688 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  9.63 ] [L0 ] [L1 ]
+POC    0 TId: 0 ( I-SLICE, QP 26 )    2985320 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET  4.16 ] [L0 ] [L1 ]
 
 
 I Slices--------------------------------------------------------
 	Total Frames |  Bitrate    Y-PSNR    U-PSNR    V-PSNR 
-	       10    i 148859.6000   99.9900   99.9900   99.9900
-Bytes written to file: 3721541 (148861.640 kbps)
-Bytes for SPS/PPS/Slice (Incl. Annex B): 3721541 (148861.640 kbps)
+	        1    i 149266.0000   99.9900   99.9900   99.9900
+Bytes written to file: 373180 (149272.000 kbps)
+Bytes for SPS/PPS/Slice (Incl. Annex B): 373180 (149272.000 kbps)
 
- Total Time:       96.410 sec.
+ Total Time:        4.170 sec.
