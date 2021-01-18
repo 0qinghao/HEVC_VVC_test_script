@@ -1,0 +1,45 @@
+
+HM software: Encoder Version [15.0][Linux][GCC 4.8.5][64 bit] 
+
+Input          File          : ../../HEVC_test_sequence/ClassE/FourPeople_1280x720_60.yuv
+Bitstream      File          : FourPeople.bin
+Reconstruction File          : FourPeople.yuv
+Real     Format              : 1280x720 60Hz
+Internal Format              : 1280x720 60Hz
+Frame/Field                  : Frame based coding
+Frame index                  : 0 - 0 (1 frames)
+CU size / depth              : 32 / 3
+RQT trans. size (min / max)  : 4 / 32
+Max RQT depth inter          : 3
+Max RQT depth intra          : 1
+Min PCM size                 : 8
+Motion search range          : 64
+Intra period                 : 1
+Decoding refresh type        : 0
+QP                           : 26.00
+Max dQP signaling depth      : 0
+Cb QP Offset                 : 0
+Cr QP Offset                 : 0
+QP adaptation                : 0 (range=0)
+GOP size                     : 1
+Internal bit depth           : (Y:8, C:8)
+PCM sample bit depth         : (Y:8, C:8)
+RateControl                  : 0
+Max Num Merge Candidates     : 5
+
+TOOL CFG: IBD:0 HAD:0 RDQ:0 RDQTS:0 RDpenalty:0 SQP:0 ASR:0 FEN:0 ECU:0 FDM:0 CFM:0 ESD:0 RQT:1 TransformSkip:0 TransformSkipFast:0 Slice: M=0 SliceSegment: M=0 CIP:0 SAO:0 PCM:0 TransQuantBypassEnabled: =1 WPP:0 WPB:0 PME:2  WaveFrontSynchro:0 WaveFrontSubstreams:1 ScalingList:0 TMVPMode:1  SignBitHidingFlag:1 RecalQP:0
+
+***    VPS numBytesInNALunit: 24
+***    SPS numBytesInNALunit: 31
+***    PPS numBytesInNALunit: 7
+*** IDR_W_RADL numBytesInNALunit: 71202
+POC    0 TId: 0 ( I-SLICE, QP 26 )     570112 bits [Y 99.9900 dB    U 99.9900 dB    V 5.7713 dB] [ET  2.92 ] [L0 ] [L1 ]
+
+
+I Slices--------------------------------------------------------
+	Total Frames |  Bitrate    Y-PSNR    U-PSNR    V-PSNR 
+	        1    i  34206.7200   99.9900   99.9900    5.7713
+Bytes written to file: 71279 (34213.920 kbps)
+Bytes for SPS/PPS/Slice (Incl. Annex B): 71279 (34213.920 kbps)
+
+ Total Time:        2.950 sec.

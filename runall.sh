@@ -6,8 +6,8 @@ cfg_name=(PeopleOnStreet Traffic BasketballDrive BQTerrace Cactus Kimono ParkSce
 
 test_1_frame=1
 if [ $test_1_frame -eq 1 ]; then
-    para="--FramesToBeEncoded=10"
-    # para="--FramesToBeEncoded=1"
+    # para="--FramesToBeEncoded=10"
+    para="--FramesToBeEncoded=1"
     # para="--FramesToBeEncoded=200"
 else
     para=""
@@ -16,7 +16,7 @@ fi
 basedir=`pwd`
 
 for i in "${!cfg_name[@]}";
-do
+# do
 {
     echo "Encoding "${cfg_name[$i]}
     cd $basedir/bin_src
@@ -27,8 +27,8 @@ do
     ./TAppEncoderStatic -c ../cfg/encoder_intra_main_LL.cfg -c ../cfg/per-sequence/${cfg_name[$i]}.cfg $para > ./${cfg_name[$i]}_enc_LPonly.log
     cd $basedir/bin_LBLP
     ./TAppEncoderStatic -c ../cfg/encoder_intra_main_LL.cfg -c ../cfg/per-sequence/${cfg_name[$i]}.cfg $para > ./${cfg_name[$i]}_enc_LBLP.log
-}&
-done
+}
+# done
 
 wait
 
