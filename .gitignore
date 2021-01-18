@@ -858,3 +858,5 @@ HEVC_test_sequence/
 !.vscode/breakpoints*
 *.csv
 !save/**
+!BinAndLog/**
+~$*.xls*
