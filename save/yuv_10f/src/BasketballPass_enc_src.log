@@ -29,16 +29,16 @@ Max Num Merge Candidates     : 5
 
 TOOL CFG: IBD:0 HAD:0 RDQ:0 RDQTS:0 RDpenalty:0 SQP:0 ASR:0 FEN:0 ECU:0 FDM:0 CFM:0 ESD:0 RQT:1 TransformSkip:0 TransformSkipFast:0 Slice: M=0 SliceSegment: M=0 CIP:0 SAO:0 PCM:0 TransQuantBypassEnabled: =1 WPP:0 WPB:0 PME:2  WaveFrontSynchro:0 WaveFrontSubstreams:1 ScalingList:0 TMVPMode:1  SignBitHidingFlag:1 RecalQP:0
 
-POC    0 TId: 0 ( I-SLICE, QP 26 )     574288 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     2 ] [L0 ] [L1 ]
-POC    1 TId: 0 ( I-SLICE, QP 26 )     574040 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     2 ] [L0 ] [L1 ]
-POC    2 TId: 0 ( I-SLICE, QP 26 )     574768 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     2 ] [L0 ] [L1 ]
-POC    3 TId: 0 ( I-SLICE, QP 26 )     573472 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     2 ] [L0 ] [L1 ]
-POC    4 TId: 0 ( I-SLICE, QP 26 )     573944 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     2 ] [L0 ] [L1 ]
-POC    5 TId: 0 ( I-SLICE, QP 26 )     572504 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     2 ] [L0 ] [L1 ]
-POC    6 TId: 0 ( I-SLICE, QP 26 )     570792 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     2 ] [L0 ] [L1 ]
-POC    7 TId: 0 ( I-SLICE, QP 26 )     570856 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     2 ] [L0 ] [L1 ]
-POC    8 TId: 0 ( I-SLICE, QP 26 )     568344 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     2 ] [L0 ] [L1 ]
-POC    9 TId: 0 ( I-SLICE, QP 26 )     567056 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     2 ] [L0 ] [L1 ]
+POC    0 TId: 0 ( I-SLICE, QP 26 )     574288 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     1 ] [L0 ] [L1 ]
+POC    1 TId: 0 ( I-SLICE, QP 26 )     574040 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     1 ] [L0 ] [L1 ]
+POC    2 TId: 0 ( I-SLICE, QP 26 )     574768 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     1 ] [L0 ] [L1 ]
+POC    3 TId: 0 ( I-SLICE, QP 26 )     573472 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     1 ] [L0 ] [L1 ]
+POC    4 TId: 0 ( I-SLICE, QP 26 )     573944 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     1 ] [L0 ] [L1 ]
+POC    5 TId: 0 ( I-SLICE, QP 26 )     572504 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     1 ] [L0 ] [L1 ]
+POC    6 TId: 0 ( I-SLICE, QP 26 )     570792 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     1 ] [L0 ] [L1 ]
+POC    7 TId: 0 ( I-SLICE, QP 26 )     570856 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     1 ] [L0 ] [L1 ]
+POC    8 TId: 0 ( I-SLICE, QP 26 )     568344 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     1 ] [L0 ] [L1 ]
+POC    9 TId: 0 ( I-SLICE, QP 26 )     567056 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET     1 ] [L0 ] [L1 ]
 
 
 SUMMARY --------------------------------------------------------
@@ -63,4 +63,4 @@ B Slices--------------------------------------------------------
 RVM: 0.000
 Bytes written to file: 715059 (28602.360 kbps)
 
- Total Time:       18.340 sec.
+ Total Time:       12.984 sec.
