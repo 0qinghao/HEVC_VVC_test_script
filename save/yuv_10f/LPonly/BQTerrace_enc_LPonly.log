@@ -32,32 +32,32 @@ TOOL CFG: IBD:0 HAD:0 RDQ:0 RDQTS:0 RDpenalty:0 SQP:0 ASR:0 FEN:0 ECU:0 FDM:0 CF
 ***    VPS numBytesInNALunit: 24
 ***    SPS numBytesInNALunit: 31
 ***    PPS numBytesInNALunit: 7
-*** IDR_W_RADL numBytesInNALunit: 1453645
-POC    0 TId: 0 ( I-SLICE, QP 26 )   11629656 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 31.52 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 1452839
-POC    1 TId: 0 ( I-SLICE, QP 26 )   11622712 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 31.62 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 1453862
-POC    2 TId: 0 ( I-SLICE, QP 26 )   11630896 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 31.98 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 1453734
-POC    3 TId: 0 ( I-SLICE, QP 26 )   11629872 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 31.67 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 1453424
-POC    4 TId: 0 ( I-SLICE, QP 26 )   11627392 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 31.52 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 1453886
-POC    5 TId: 0 ( I-SLICE, QP 26 )   11631088 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 31.41 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 1453360
-POC    6 TId: 0 ( I-SLICE, QP 26 )   11626880 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 31.44 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 1452511
-POC    7 TId: 0 ( I-SLICE, QP 26 )   11620088 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 31.41 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 1453398
-POC    8 TId: 0 ( I-SLICE, QP 26 )   11627184 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 31.30 ] [L0 ] [L1 ]
-*** TRAIL_R numBytesInNALunit: 1452403
-POC    9 TId: 0 ( I-SLICE, QP 26 )   11619224 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 31.66 ] [L0 ] [L1 ]
+*** IDR_W_RADL numBytesInNALunit: 1465326
+POC    0 TId: 0 ( I-SLICE, QP 26 )   11723104 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 33.67 ] [L0 ] [L1 ]
+*** TRAIL_R numBytesInNALunit: 1464344
+POC    1 TId: 0 ( I-SLICE, QP 26 )   11714752 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 33.94 ] [L0 ] [L1 ]
+*** TRAIL_R numBytesInNALunit: 1462954
+POC    2 TId: 0 ( I-SLICE, QP 26 )   11703632 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 34.09 ] [L0 ] [L1 ]
+*** TRAIL_R numBytesInNALunit: 1463818
+POC    3 TId: 0 ( I-SLICE, QP 26 )   11710544 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 33.95 ] [L0 ] [L1 ]
+*** TRAIL_R numBytesInNALunit: 1462863
+POC    4 TId: 0 ( I-SLICE, QP 26 )   11702904 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 34.55 ] [L0 ] [L1 ]
+*** TRAIL_R numBytesInNALunit: 1464286
+POC    5 TId: 0 ( I-SLICE, QP 26 )   11714288 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 34.23 ] [L0 ] [L1 ]
+*** TRAIL_R numBytesInNALunit: 1463755
+POC    6 TId: 0 ( I-SLICE, QP 26 )   11710040 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 34.41 ] [L0 ] [L1 ]
+*** TRAIL_R numBytesInNALunit: 1462826
+POC    7 TId: 0 ( I-SLICE, QP 26 )   11702608 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 33.97 ] [L0 ] [L1 ]
+*** TRAIL_R numBytesInNALunit: 1464092
+POC    8 TId: 0 ( I-SLICE, QP 26 )   11712736 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 34.11 ] [L0 ] [L1 ]
+*** TRAIL_R numBytesInNALunit: 1462065
+POC    9 TId: 0 ( I-SLICE, QP 26 )   11696520 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 34.17 ] [L0 ] [L1 ]
 
 
 I Slices--------------------------------------------------------
 	Total Frames |  Bitrate    Y-PSNR    U-PSNR    V-PSNR 
-	       10    i 697589.9520   99.9900   99.9900   99.9900
-Bytes written to file: 14533175 (697592.400 kbps)
-Bytes for SPS/PPS/Slice (Incl. Annex B): 14533175 (697592.400 kbps)
+	       10    i 702546.7680   99.9900   99.9900   99.9900
+Bytes written to file: 14636442 (702549.216 kbps)
+Bytes for SPS/PPS/Slice (Incl. Annex B): 14636442 (702549.216 kbps)
 
- Total Time:      316.234 sec.
+ Total Time:      341.859 sec.
