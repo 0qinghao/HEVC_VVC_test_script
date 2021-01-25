@@ -1,0 +1,63 @@
+
+HM software: Encoder Version [15.0][Linux][GCC 4.8.5][64 bit] 
+
+Input          File          : ../../HEVC_test_sequence/ClassB/Kimono1_1920x1080_24.yuv
+Bitstream      File          : Kimono.bin
+Reconstruction File          : Kimono.yuv
+Real     Format              : 1920x1080 24Hz
+Internal Format              : 1920x1080 24Hz
+Frame/Field                  : Frame based coding
+Frame index                  : 0 - 9 (10 frames)
+CU size / depth              : 32 / 3
+RQT trans. size (min / max)  : 4 / 32
+Max RQT depth inter          : 3
+Max RQT depth intra          : 1
+Min PCM size                 : 8
+Motion search range          : 64
+Intra period                 : 1
+Decoding refresh type        : 0
+QP                           : 26.00
+Max dQP signaling depth      : 0
+Cb QP Offset                 : 0
+Cr QP Offset                 : 0
+QP adaptation                : 0 (range=0)
+GOP size                     : 1
+Internal bit depth           : (Y:8, C:8)
+PCM sample bit depth         : (Y:8, C:8)
+RateControl                  : 0
+Max Num Merge Candidates     : 5
+
+TOOL CFG: IBD:0 HAD:0 RDQ:0 RDQTS:0 RDpenalty:0 SQP:0 ASR:0 FEN:0 ECU:0 FDM:0 CFM:0 ESD:0 RQT:1 TransformSkip:0 TransformSkipFast:0 Slice: M=0 SliceSegment: M=0 CIP:0 SAO:0 PCM:0 TransQuantBypassEnabled: =1 WPP:0 WPB:0 PME:2  WaveFrontSynchro:0 WaveFrontSubstreams:1 ScalingList:0 TMVPMode:1  SignBitHidingFlag:1 RecalQP:0
+
+***    VPS numBytesInNALunit: 24
+***    SPS numBytesInNALunit: 31
+***    PPS numBytesInNALunit: 7
+*** IDR_W_RADL numBytesInNALunit: 1228626
+POC    0 TId: 0 ( I-SLICE, QP 26 )    9829504 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 30.95 ] [L0 ] [L1 ]
+*** TRAIL_R numBytesInNALunit: 1227953
+POC    1 TId: 0 ( I-SLICE, QP 26 )    9823624 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 31.47 ] [L0 ] [L1 ]
+*** TRAIL_R numBytesInNALunit: 1232624
+POC    2 TId: 0 ( I-SLICE, QP 26 )    9860992 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 31.47 ] [L0 ] [L1 ]
+*** TRAIL_R numBytesInNALunit: 1238475
+POC    3 TId: 0 ( I-SLICE, QP 26 )    9907800 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 31.56 ] [L0 ] [L1 ]
+*** TRAIL_R numBytesInNALunit: 1240437
+POC    4 TId: 0 ( I-SLICE, QP 26 )    9923496 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 29.56 ] [L0 ] [L1 ]
+*** TRAIL_R numBytesInNALunit: 1243283
+POC    5 TId: 0 ( I-SLICE, QP 26 )    9946264 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 26.91 ] [L0 ] [L1 ]
+*** TRAIL_R numBytesInNALunit: 1240270
+POC    6 TId: 0 ( I-SLICE, QP 26 )    9922160 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 23.84 ] [L0 ] [L1 ]
+*** TRAIL_R numBytesInNALunit: 1237499
+POC    7 TId: 0 ( I-SLICE, QP 26 )    9899992 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 21.80 ] [L0 ] [L1 ]
+*** TRAIL_R numBytesInNALunit: 1231105
+POC    8 TId: 0 ( I-SLICE, QP 26 )    9848840 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 21.45 ] [L0 ] [L1 ]
+*** TRAIL_R numBytesInNALunit: 1230467
+POC    9 TId: 0 ( I-SLICE, QP 26 )    9843736 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET 21.39 ] [L0 ] [L1 ]
+
+
+I Slices--------------------------------------------------------
+	Total Frames |  Bitrate    Y-PSNR    U-PSNR    V-PSNR 
+	       10    i 237135.3792   99.9900   99.9900   99.9900
+Bytes written to file: 12350852 (237136.358 kbps)
+Bytes for SPS/PPS/Slice (Incl. Annex B): 12350852 (237136.358 kbps)
+
+ Total Time:      271.141 sec.
