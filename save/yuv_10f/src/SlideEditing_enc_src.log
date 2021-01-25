@@ -29,8 +29,8 @@ Max Num Merge Candidates     : 5
 
 TOOL CFG: IBD:0 HAD:0 RDQ:0 RDQTS:0 RDpenalty:0 SQP:0 ASR:0 FEN:0 ECU:0 FDM:0 CFM:0 ESD:0 RQT:1 TransformSkip:0 TransformSkipFast:0 Slice: M=0 SliceSegment: M=0 CIP:0 SAO:0 PCM:0 TransQuantBypassEnabled: =1 WPP:0 WPB:0 PME:2  WaveFrontSynchro:0 WaveFrontSubstreams:1 ScalingList:0 TMVPMode:1  SignBitHidingFlag:1 RecalQP:0
 
-POC    0 TId: 0 ( I-SLICE, QP 26 )    2926048 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    11 ] [L0 ] [L1 ]
-POC    1 TId: 0 ( I-SLICE, QP 26 )    2925144 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    11 ] [L0 ] [L1 ]
+POC    0 TId: 0 ( I-SLICE, QP 26 )    2926048 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    10 ] [L0 ] [L1 ]
+POC    1 TId: 0 ( I-SLICE, QP 26 )    2925144 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    10 ] [L0 ] [L1 ]
 POC    2 TId: 0 ( I-SLICE, QP 26 )    2925296 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    11 ] [L0 ] [L1 ]
 POC    3 TId: 0 ( I-SLICE, QP 26 )    2925680 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    11 ] [L0 ] [L1 ]
 POC    4 TId: 0 ( I-SLICE, QP 26 )    2933168 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    11 ] [L0 ] [L1 ]
@@ -63,4 +63,4 @@ B Slices--------------------------------------------------------
 RVM: 0.000
 Bytes written to file: 3682327 (88375.848 kbps)
 
- Total Time:      106.812 sec.
+ Total Time:      106.688 sec.

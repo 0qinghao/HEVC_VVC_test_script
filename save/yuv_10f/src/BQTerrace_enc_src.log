@@ -33,12 +33,12 @@ POC    0 TId: 0 ( I-SLICE, QP 26 )   12817176 bits [Y 99.9900 dB    U 99.9900 dB
 POC    1 TId: 0 ( I-SLICE, QP 26 )   12805384 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    27 ] [L0 ] [L1 ]
 POC    2 TId: 0 ( I-SLICE, QP 26 )   12803280 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    28 ] [L0 ] [L1 ]
 POC    3 TId: 0 ( I-SLICE, QP 26 )   12804688 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    27 ] [L0 ] [L1 ]
-POC    4 TId: 0 ( I-SLICE, QP 26 )   12804440 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    27 ] [L0 ] [L1 ]
-POC    5 TId: 0 ( I-SLICE, QP 26 )   12806040 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    28 ] [L0 ] [L1 ]
-POC    6 TId: 0 ( I-SLICE, QP 26 )   12809736 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    27 ] [L0 ] [L1 ]
-POC    7 TId: 0 ( I-SLICE, QP 26 )   12808616 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    27 ] [L0 ] [L1 ]
-POC    8 TId: 0 ( I-SLICE, QP 26 )   12806752 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    27 ] [L0 ] [L1 ]
-POC    9 TId: 0 ( I-SLICE, QP 26 )   12803736 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    28 ] [L0 ] [L1 ]
+POC    4 TId: 0 ( I-SLICE, QP 26 )   12804440 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    24 ] [L0 ] [L1 ]
+POC    5 TId: 0 ( I-SLICE, QP 26 )   12806040 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    21 ] [L0 ] [L1 ]
+POC    6 TId: 0 ( I-SLICE, QP 26 )   12809736 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    20 ] [L0 ] [L1 ]
+POC    7 TId: 0 ( I-SLICE, QP 26 )   12808616 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    20 ] [L0 ] [L1 ]
+POC    8 TId: 0 ( I-SLICE, QP 26 )   12806752 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    21 ] [L0 ] [L1 ]
+POC    9 TId: 0 ( I-SLICE, QP 26 )   12803736 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    20 ] [L0 ] [L1 ]
 
 
 SUMMARY --------------------------------------------------------
@@ -63,4 +63,4 @@ B Slices--------------------------------------------------------
 RVM: 0.000
 Bytes written to file: 16008782 (768421.536 kbps)
 
- Total Time:      274.422 sec.
+ Total Time:      236.469 sec.
