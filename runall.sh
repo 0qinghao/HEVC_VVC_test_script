@@ -19,8 +19,8 @@ for i in "${!cfg_name[@]}";
 do
 {
     echo "Encoding "${cfg_name[$i]}
-    # cd $basedir/bin_src
-    # ./TAppEncoderStatic -c ../cfg/encoder_intra_main_LL.cfg -c ../cfg/per-sequence/${cfg_name[$i]}.cfg $para > ./${cfg_name[$i]}_enc_src.log &
+    cd $basedir/bin_src
+    ./TAppEncoderStatic -c ../cfg/encoder_intra_main_LL.cfg -c ../cfg/per-sequence/${cfg_name[$i]}.cfg $para > ./${cfg_name[$i]}_enc_src.log &
     # cd $basedir/bin_LBonly
     # ./TAppEncoderStatic -c ../cfg/encoder_intra_main_LL.cfg -c ../cfg/per-sequence/${cfg_name[$i]}.cfg $para > ./${cfg_name[$i]}_enc_LBonly.log &
     cd $basedir/bin_LPonly
