@@ -1,14 +1,5 @@
 #!/usr/bin/perl
 @cfg_list = (
-    PeopleOnStreet,      Traffic,
-    BasketballDrive,     BQTerrace,
-    Cactus,              Kimono,
-    ParkScene,           BasketballDrill,
-    BQMall,              PartyScene,
-    RaceHorsesC,         BasketballPass,
-    BlowingBubbles,      BQSquare,
-    RaceHorses,          FourPeople,
-    Johnny,              KristenAndSara,
     BasketballDrillText, ChinaSpeed,
     SlideEditing,        SlideShow
 );
