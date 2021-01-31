@@ -28,9 +28,9 @@ do
     cd $basedir/bin_LBLP
     ./TAppEncoderStatic -c ../cfg/encoder_intra_main_LL.cfg -c ../cfg/per-sequence/${cfg_name[$i]}.cfg $para > ./${cfg_name[$i]}_enc_LBLP.log &
 }
+wait
 done
 
-wait
 
 # for i in "${!cfg_name[@]}";
 # do
