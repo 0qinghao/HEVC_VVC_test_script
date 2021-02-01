@@ -8,7 +8,9 @@
     RaceHorsesC,         BasketballPass,
     BlowingBubbles,      BQSquare,
     RaceHorses,          FourPeople,
-    Johnny,              KristenAndSara
+    Johnny,              KristenAndSara,
+    BasketballDrillText, ChinaSpeed,
+    SlideEditing,        SlideShow
 );
 
 # @cfg_list = ( BasketballPass, SlideEditing );
