@@ -8,10 +8,10 @@ Real     Format              : 2560x1600 30Hz
 Internal Format              : 2560x1600 30Hz
 Frame/Field                  : Frame based coding
 Frame index                  : 0 - 0 (1 frames)
-CU size / depth              : 32 / 3
+CU size / depth              : 64 / 4
 RQT trans. size (min / max)  : 4 / 32
 Max RQT depth inter          : 3
-Max RQT depth intra          : 1
+Max RQT depth intra          : 3
 Min PCM size                 : 8
 Motion search range          : 64
 Intra period                 : 1
@@ -29,17 +29,17 @@ Max Num Merge Candidates     : 5
 
 TOOL CFG: IBD:0 HAD:0 RDQ:0 RDQTS:0 RDpenalty:0 SQP:0 ASR:0 FEN:0 ECU:0 FDM:0 CFM:0 ESD:0 RQT:1 TransformSkip:0 TransformSkipFast:0 Slice: M=0 SliceSegment: M=0 CIP:0 SAO:0 PCM:0 TransQuantBypassEnabled: =1 WPP:0 WPB:0 PME:2  WaveFrontSynchro:0 WaveFrontSubstreams:1 ScalingList:0 TMVPMode:1 AQpS:0 SignBitHidingFlag:1 RecalQP:0
 
-POC    0 TId: 0 ( I-SLICE, nQP 26 QP 26 )   21920704 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    21 ] [L0 ] [L1 ]
+POC    0 TId: 0 ( I-SLICE, nQP 26 QP 26 )   21917872 bits [Y 99.9900 dB    U 99.9900 dB    V 99.9900 dB] [ET    33 ] [L0 ] [L1 ]
 
 
 SUMMARY --------------------------------------------------------
 	Total Frames |  Bitrate    Y-PSNR    U-PSNR    V-PSNR 
-	        1    a 657621.1200   99.9900   99.9900   99.9900
+	        1    a 657536.1600   99.9900   99.9900   99.9900
 
 
 I Slices--------------------------------------------------------
 	Total Frames |  Bitrate    Y-PSNR    U-PSNR    V-PSNR 
-	        1    i 657621.1200   99.9900   99.9900   99.9900
+	        1    i 657536.1600   99.9900   99.9900   99.9900
 
 
 P Slices--------------------------------------------------------
@@ -52,6 +52,6 @@ B Slices--------------------------------------------------------
 	        0    b        -nan      -nan      -nan      -nan
 
 RVM: 0.000
-Bytes written to file: 2740103 (657624.720 kbps)
+Bytes written to file: 2739749 (657539.760 kbps)
 
- Total Time:       20.938 sec.
+ Total Time:       33.469 sec.
