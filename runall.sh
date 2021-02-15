@@ -6,8 +6,8 @@ cfg_name=(PeopleOnStreet Traffic BasketballDrive BQTerrace Cactus Kimono ParkSce
 
 test_1_frame=1
 if [ $test_1_frame -eq 1 ]; then
-    para="--FramesToBeEncoded=10"
-    # para="--FramesToBeEncoded=1"
+    # para="--FramesToBeEncoded=10"
+    para="--FramesToBeEncoded=1"
     # para="--FramesToBeEncoded=200"
 else
     para=""
@@ -21,8 +21,8 @@ do
     echo "Encoding "${cfg_name[$i]}
     cd $basedir/bin_src
     ./TAppEncoderStatic -c ../cfg/encoder_intra_main_LL.cfg -c ../cfg/per-sequence/${cfg_name[$i]}.cfg $para > ./${cfg_name[$i]}_enc_src.log &
-    # cd $basedir/bin_LBonly
-    # ./TAppEncoderStatic -c ../cfg/encoder_intra_main_LL.cfg -c ../cfg/per-sequence/${cfg_name[$i]}.cfg $para > ./${cfg_name[$i]}_enc_LBonly.log &
+    cd $basedir/bin_scan
+    ./TAppEncoderStatic -c ../cfg/encoder_intra_main_LL.cfg -c ../cfg/per-sequence/${cfg_name[$i]}.cfg $para > ./${cfg_name[$i]}_enc_scan.log &
     # cd $basedir/bin_LPonly
     # ./TAppEncoderStatic -c ../cfg/encoder_intra_main_LL.cfg -c ../cfg/per-sequence/${cfg_name[$i]}.cfg $para > ./${cfg_name[$i]}_enc_LPonly.log &
     # cd $basedir/bin_LBLP
@@ -37,8 +37,8 @@ wait
 #     echo "Decoding "${cfg_name[$i]}
 #     cd $basedir/bin_src
 #     ./TAppDecoderStatic -b ./${cfg_name[$i]}.bin -o ${cfg_name[$i]}_dec.yuv > ./${cfg_name[$i]}_dec_src.log
-#     # cd $basedir/bin_LBonly
-#     # ./TAppDecoderStatic -b ./${cfg_name[$i]}.bin -o ${cfg_name[$i]}_dec.yuv > ./${cfg_name[$i]}_dec_LBonly.log
+#     # cd $basedir/bin_scan
+#     # ./TAppDecoderStatic -b ./${cfg_name[$i]}.bin -o ${cfg_name[$i]}_dec.yuv > ./${cfg_name[$i]}_dec_scan.log
 #     # cd $basedir/bin_LPonly
 #     # ./TAppDecoderStatic -b ./${cfg_name[$i]}.bin -o ${cfg_name[$i]}_dec.yuv > ./${cfg_name[$i]}_dec_LPonly.log
 #     # cd $basedir/bin_LBLP
