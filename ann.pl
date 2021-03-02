@@ -1,73 +1,70 @@
 #!/usr/bin/perl
-@cfg_list = (
-    PeopleOnStreet,      Traffic,
-    BasketballDrive,     BQTerrace,
-    Cactus,              Kimono,
-    ParkScene,           BasketballDrill,
-    BQMall,              PartyScene,
-    RaceHorsesC,         BasketballPass,
-    BlowingBubbles,      BQSquare,
-    RaceHorses,          FourPeople,
-    Johnny,              KristenAndSara,
-    BasketballDrillText, ChinaSpeed,
-    SlideEditing,        SlideShow
+@SeqName_list = (
+    # PeopleOnStreet,      Traffic,
+    # BasketballDrive,     BQTerrace,
+    # Cactus,              Kimono,
+    # ParkScene,           BasketballDrill,
+    # BQMall,              PartyScene,
+    # RaceHorsesC,         BasketballPass,
+    # BlowingBubbles,      BQSquare,
+    # RaceHorses,          FourPeople,
+    # Johnny,              KristenAndSara,
+    # BasketballDrillText, ChinaSpeed,
+    SlideEditing,        SlideShow,
+    FlyingGraphics,
 );
 
-# @cfg_list = ( BasketballPass, SlideEditing );
+open( my $logfile, ">", "src_vs_scan.csv");
+print $logfile "Sequence, src_Bits, scan_Bits, Ratio\n";
+$avg_ratio = 0;
+foreach $SeqName_name (@SeqName_list) {
+    $filename_src = "./bin_src/" . $SeqName_name . "_enc" . "_src.log";
+    $filename_scan = "./bin_scan/" . $SeqName_name . "_enc" . "_scan.log";
 
-# @dir_list = ( "./bin_src/", "./bin_scan/", "./bin_LPonly/", "./bin_LBLP/" );
-# @app_list = ( "_src.log",   "_scan.log",   "_LPonly.log",   "_LBLP.log" );
+    open( f_src, "<", $filename_src ) or die "未找到文件 $filename_src";
+    @lines_src = <f_src>;
+    open( f_scan, "<", $filename_scan ) or die "未找到文件 $filename_scan";
+    @lines_scan = <f_scan>;
 
-@dir_list = ( "./bin_src/", "./bin_scan/" );
-@app_list = ( "_src.log",   "_scan.log" );
-# @dir_list = ( "./bin_src/", "./bin_LBLP/" );
-# @app_list = ( "_src.log",   "_LBLP.log" );
-
-# @dir_list = ("./bin_src/");
-# @app_list = ("_src.log");
-# @dir_list = ("./bin_LBLP/");
-# @app_list = ("_LBLP.log");
-
-foreach $index ( 0 .. $#{dir_list} ) {
-    open( my $logfile, ">", $dir_list[$index] . $app_list[$index] . ".csv" );
-    print $logfile "Sequence, Bytes, Encode_time, Decode_time\n";
-
-    foreach $cfg_name (@cfg_list) {
-        $filename = $dir_list[$index] . $cfg_name . "_enc" . $app_list[$index];
-        open( f, "<", $filename ) or die "未找到文件 $filename";
-        @lines = <f>;
-        foreach $line (@lines) {
-            if ( $line =~ /(?<=Bytes\ written\ to\ file:)\s*\d+/ ) {
-                $Bytes = $&;
-            }
-            elsif ( $line =~ /(?<=\ Total\ Time:)\s*[\d\.]+/ ) {
-                $enc_time = $&;
-                break;
-            }
+    foreach $line_src (@lines_src) {
+        if ( $line_src =~ /(?<=Bytes\ written\ to\ file:)\s*\d+/ ) {
+            $Bytes_src = $&;
         }
-        close(f) or die "无法关闭文件 $filename";
-
-       # $filename = $dir_list[$index] . $cfg_name . "_dec" . $app_list[$index];
-       # open( f, "<", $filename ) or die "未找到文件 $filename";
-       # @lines = <f>;
-       # foreach $line (@lines) {
-       #     if ( $line =~ /(?<=\ Total\ Time:)\s*[\d\.]+/ ) {
-       #         $dec_time = $&;
-       #         break;
-       #     }
-       # }
-       # close(f) or die "无法关闭文件 $filename";
-
-        print $logfile $cfg_name;
-        print $logfile ",";
-        print $logfile $Bytes;
-        print $logfile ",";
-        print $logfile $enc_time;
-        print $logfile ",";
-
-        # print $logfile $dec_time;
-        print $logfile "\n";
+        elsif ( $line_src =~ /(?<=\ Total\ Time:)\s*[\d\.]+/ ) {
+            $enc_time_src = $&;
+            break;
+        }
     }
+    close(f_src) or die "无法关闭文件 $filename_src";
+    foreach $line_scan (@lines_scan) {
+        if ( $line_scan =~ /(?<=Bytes\ written\ to\ file:)\s*\d+/ ) {
+            $Bytes_scan = $&;
+        }
+        elsif ( $line_scan =~ /(?<=\ Total\ Time:)\s*[\d\.]+/ ) {
+            $enc_time_scan = $&;
+            break;
+        }
+    }
+    close(f_scan) or die "无法关闭文件 $filename_scan";
 
-    close(logfile);
+    print $logfile $SeqName_name;
+    print $logfile ",";
+    print $logfile $Bytes_src;
+    print $logfile ",";
+    print $logfile $Bytes_scan;
+    print $logfile ",";
+    print $logfile ($Bytes_scan - $Bytes_src)/$Bytes_src*100;
+    print $logfile ",";
+    print $logfile "\n";
+
+    $avg_ratio = $avg_ratio + ($Bytes_scan - $Bytes_src)/$Bytes_src*100/(1+$#{SeqName_list})
 }
+print $logfile "AVG";
+print $logfile ",";
+print $logfile "-";
+print $logfile ",";
+print $logfile "-";
+print $logfile ",";
+print $logfile $avg_ratio;
+print $logfile ",";
+close(logfile);
