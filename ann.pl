@@ -11,34 +11,35 @@
     Johnny,              KristenAndSara,
     BasketballDrillText, ChinaSpeed,
     SlideEditing,        SlideShow,
-    # FlyingGraphics,
 );
 
-open( my $logfile, ">", "src_vs_EI.csv");
-print $logfile "Sequence, src_Bits, EI_Bits, Ratio\n";
+open( my $logfile, ">", "HEVC_vs_EI.csv");
+print $logfile "Sequence, HEVC_Bits, HEVC_Time, EI_Bits, EI_Time, Ratio_Bits, x_Time\n";
 $avg_ratio = 0;
+$avg_x_time = 0;
 foreach $SeqName_name (@SeqName_list) {
-    $filename_src = "./bin_src/" . $SeqName_name . "_enc" . "_src.log";
+    $filename_HEVC = "./bin_HEVC/" . $SeqName_name . "_enc" . "_HEVC.log";
     $filename_EI = "./bin_EI/" . $SeqName_name . "_enc" . "_EI.log";
 
-    open( f_src, "<", $filename_src ) or die "未找到文件 $filename_src";
-    @lines_src = <f_src>;
+    open( f_HEVC, "<", $filename_HEVC ) or die "未找到文件 $filename_HEVC";
+    @lines_HEVC = <f_HEVC>;
     open( f_EI, "<", $filename_EI ) or die "未找到文件 $filename_EI";
     @lines_EI = <f_EI>;
 
-    foreach $line_src (@lines_src) {
-        if ( $line_src =~ /(?<=Bytes\ written\ to\ file:)\s*\d+/ ) {
-            $Bytes_src = $&;
+    foreach $line_HEVC (@lines_HEVC) {
+        if ( $line_HEVC =~ /(?<=Bytes\ written\ to\ file:)\s*\d+/ ) {
+            $Bits_HEVC = $&;
         }
-        elsif ( $line_src =~ /(?<=\ Total\ Time:)\s*[\d\.]+/ ) {
-            $enc_time_src = $&;
+        elsif ( $line_HEVC =~ /(?<=\ Total\ Time:)\s*[\d\.]+/ ) {
+            $enc_time_HEVC = $&;
             break;
         }
     }
-    close(f_src) or die "无法关闭文件 $filename_src";
+    close(f_HEVC) or die "无法关闭文件 $filename_HEVC";
+
     foreach $line_EI (@lines_EI) {
         if ( $line_EI =~ /(?<=Bytes\ written\ to\ file:)\s*\d+/ ) {
-            $Bytes_EI = $&;
+            $Bits_EI = $&;
         }
         elsif ( $line_EI =~ /(?<=\ Total\ Time:)\s*[\d\.]+/ ) {
             $enc_time_EI = $&;
@@ -49,22 +50,35 @@ foreach $SeqName_name (@SeqName_list) {
 
     print $logfile $SeqName_name;
     print $logfile ",";
-    print $logfile $Bytes_src;
+    print $logfile $Bits_HEVC;
     print $logfile ",";
-    print $logfile $Bytes_EI;
+    print $logfile $enc_time_HEVC;
     print $logfile ",";
-    print $logfile ($Bytes_EI - $Bytes_src)/$Bytes_src*100;
+    print $logfile $Bits_EI;
+    print $logfile ",";
+    print $logfile $enc_time_EI;
+    print $logfile ",";
+    print $logfile ($Bits_EI - $Bits_HEVC)/$Bits_HEVC*100;
+    print $logfile ",";
+    print $logfile $enc_time_EI/$enc_time_HEVC;
     print $logfile ",";
     print $logfile "\n";
 
-    $avg_ratio = $avg_ratio + ($Bytes_EI - $Bytes_src)/$Bytes_src*100/(1+$#{SeqName_list})
+    $avg_ratio = $avg_ratio + ($Bits_EI - $Bits_HEVC)/$Bits_HEVC*100/(1+$#{SeqName_list});
+    $avg_x_time = $avg_x_time + $enc_time_EI/$enc_time_HEVC/(1+$#{SeqName_list});
 }
-print $logfile "AVG";
+print $logfile 1+$#{SeqName_list} . "AVG";
+print $logfile ",";
+print $logfile "-";
+print $logfile ",";
+print $logfile "-";
 print $logfile ",";
 print $logfile "-";
 print $logfile ",";
 print $logfile "-";
 print $logfile ",";
 print $logfile $avg_ratio;
+print $logfile ",";
+print $logfile $avg_x_time;
 print $logfile ",";
 close(logfile);
