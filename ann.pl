@@ -28,7 +28,7 @@ foreach $SeqName_name (@SeqName_list) {
     @lines_VVC = <f_VVC>;
 
     foreach $line_HEVC (@lines_HEVC) {
-        if ( $line_HEVC =~ /\s*[\d\.]+(?=\ bits\ \[Y\ 99)/ ) {
+        if ( $line_HEVC =~ /(?<=\ 10\ {4}a)\s*[\d\.]+/ ) {
             $Bits_HEVC = $&;
         }
         elsif ( $line_HEVC =~ /(?<=\ Total\ Time:)\s*[\d\.]+/ ) {
@@ -39,7 +39,7 @@ foreach $SeqName_name (@SeqName_list) {
     close(f_HEVC) or die "无法关闭文件 $filename_HEVC";
 
     foreach $line_VVC (@lines_VVC) {
-        if ( $line_VVC =~ /\s*[\d\.]+(?=\ bits\ \[Y\ 99)/ ) {
+        if ( $line_VVC =~ /(?<=\ 10\ {4}a)\s*[\d\.]+/ ) {
             $Bits_VVC = $&;
         }
         elsif ( $line_VVC =~ /(?<=\ Total\ Time:)\s*[\d\.]+/ ) {
