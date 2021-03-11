@@ -5,11 +5,11 @@
 SeqName=(PeopleOnStreet Traffic BasketballDrive BQTerrace Cactus Kimono ParkScene BasketballDrill BQMall PartyScene RaceHorsesC BasketballPass BlowingBubbles BQSquare RaceHorses FourPeople Johnny KristenAndSara BasketballDrillText ChinaSpeed SlideEditing SlideShow)
 # SeqName=(SlideEditing SlideShow FlyingGraphics)
 
-test_time=1
+test_time=0
 test_1_frame=1
 if [ $test_1_frame -eq 1 ]; then
-    para="--FramesToBeEncoded=10"
-    # para="--FramesToBeEncoded=1"
+    # para="--FramesToBeEncoded=10"
+    para="--FramesToBeEncoded=1"
     # para="--FramesToBeEncoded=100"
 else
     para=""

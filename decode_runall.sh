@@ -11,7 +11,7 @@ for i in "${!SeqName[@]}";
 do
 {
     echo "Decoding "${SeqName[$i]}
-    cd $basedir/bin_src
+    cd $basedir/bin_HEVC
     ./TAppDecoderStatic -b ./${SeqName[$i]}.bin -o ${SeqName[$i]}_dec.yuv > ./${SeqName[$i]}_dec_src.log &
     cd $basedir/bin_EI
     ./TAppDecoderStatic -b ./${SeqName[$i]}.bin -o ${SeqName[$i]}_dec.yuv > ./${SeqName[$i]}_dec_EI.log &
