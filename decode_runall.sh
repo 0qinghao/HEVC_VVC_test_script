@@ -7,13 +7,26 @@ SeqName=(PeopleOnStreet Traffic BasketballDrive BQTerrace Cactus Kimono ParkScen
 
 basedir=`pwd`
 
-for i in "${!SeqName[@]}";
-do
-{
-    echo "Decoding "${SeqName[$i]}
-    cd $basedir/bin_HEVC
-    ./TAppDecoderStatic -b ./${SeqName[$i]}.bin -o ${SeqName[$i]}_dec.yuv > ./${SeqName[$i]}_dec_src.log &
-    cd $basedir/bin_EI
-    ./TAppDecoderStatic -b ./${SeqName[$i]}.bin -o ${SeqName[$i]}_dec.yuv > ./${SeqName[$i]}_dec_EI.log &
-}&
-done
+test_time=1
+
+if [ $test_time -eq 0 ]; then
+    for i in "${!SeqName[@]}";
+    do
+    {
+        echo "Decoding "${SeqName[$i]}
+        cd $basedir/bin_HEVC
+        ./TAppDecoderStatic -b ./${SeqName[$i]}.bin -o ${SeqName[$i]}_dec.yuv > ./${SeqName[$i]}_dec_HEVC.log &
+        cd $basedir/bin_EI
+        ./TAppDecoderStatic -b ./${SeqName[$i]}.bin -o ${SeqName[$i]}_dec.yuv > ./${SeqName[$i]}_dec_EI.log &
+    }&
+    done
+else
+    for i in "${!SeqName[@]}";
+    {
+        echo "Decoding "${SeqName[$i]}
+        cd $basedir/bin_HEVC
+        ./TAppDecoderStatic -b ./${SeqName[$i]}.bin -o ${SeqName[$i]}_dec.yuv > ./${SeqName[$i]}_dec_HEVC.log
+        cd $basedir/bin_EI
+        ./TAppDecoderStatic -b ./${SeqName[$i]}.bin -o ${SeqName[$i]}_dec.yuv > ./${SeqName[$i]}_dec_EI.log
+    }
+fi
