@@ -7,8 +7,8 @@ SeqName=(PeopleOnStreet Traffic BasketballDrive BQTerrace Cactus Kimono ParkScen
 test_time=0
 test_few_frames=1
 if [ $test_few_frames -eq 1 ]; then
-    para="--FramesToBeEncoded=1"
-    # para="--FramesToBeEncoded=10"
+    # para="--FramesToBeEncoded=1"
+    para="--FramesToBeEncoded=10"
     # para="--FramesToBeEncoded=100"
 else
     para=""
