@@ -9,6 +9,7 @@
     BlowingBubbles,      BQSquare,
     RaceHorses,          FourPeople,
     Johnny,              KristenAndSara,
+    Vidyo1, Vidyo3, Vidyo4,
     BasketballDrillText, ChinaSpeed,
     SlideEditing,        SlideShow,
 );
