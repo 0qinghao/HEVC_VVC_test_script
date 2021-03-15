@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-@SeqName_list = (
+my @SeqName_list = (
     PeopleOnStreet,      Traffic,
     BasketballDrive,     BQTerrace,
     Cactus,              Kimono,
@@ -27,16 +27,9 @@ foreach $SeqName_name (@SeqName_list) {
     open( f_VVC_EI, "<", $filename_VVC_EI ) or die "未找到文件 $filename_VVC_EI";
     @lines_VVC_EI = <f_VVC_EI>;
 
-    $next_line_bitrate == 0;
     foreach $line_VVC (@lines_VVC) {
-        if ( $next_line_bitrate == 1 ) {
-            if ( $line_VVC =~ /(?<=\ a\ )\s*[\d\.]+/ ) {
-                $Bits_VVC = $&;
-            }
-            $next_line_bitrate == 0;
-        }
-        elsif ( $line_VVC =~ /Total\ Frames\ |\ {3}Bitrate\ / ) {
-            $next_line_bitrate = 1;
+        if ( $line_VVC =~ /(?<=POC    1 LId:  0 TId: 0 \( CRA, I-SLICE, QP 0 \))\s*[\d\.]+/ ) {
+            $Bits_VVC = $&;
         }
         if ( $line_VVC =~ /(?<=\ Total\ Time:)\s*[\d\.]+/ ) {
             $enc_time_VVC = $&;
@@ -47,14 +40,8 @@ foreach $SeqName_name (@SeqName_list) {
 
     $next_line_bitrate == 0;
     foreach $line_VVC_EI (@lines_VVC_EI) {
-        if ( $next_line_bitrate == 1 ) {
-            if ( $line_VVC_EI =~ /(?<=\ a\ )\s*[\d\.]+/ ) {
-                $Bits_VVC_EI = $&;
-            }
-            $next_line_bitrate == 0;
-        }
-        elsif ( $line_VVC_EI =~ /Total\ Frames\ |\ {3}Bitrate\ / ) {
-            $next_line_bitrate = 1;
+        if ( $line_VVC_EI =~ /(?<=POC    1 LId:  0 TId: 0 \( CRA, I-SLICE, QP 0 \))\s*[\d\.]+/ ) {
+            $Bits_VVC_EI = $&;
         }
         if ( $line_VVC_EI =~ /(?<=\ Total\ Time:)\s*[\d\.]+/ ) {
             $enc_time_VVC_EI = $&;
