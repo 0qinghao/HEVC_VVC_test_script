@@ -23,9 +23,9 @@ if [ $test_time -eq 0 ]; then
     {
         echo "Encoding "${SeqName[$i]}
         cd $basedir/bin_HEVC
-        ./TAppEncoderStatic -c ../cfg/encoder_intra_main_LL.cfg -c ../cfg/per-sequence/${SeqName[$i]}.cfg $para > ./${SeqName[$i]}_enc_HEVC.log &
+        ./TAppEncoderStatic -c ../cfg/encoder_intra_main.cfg -c ../cfg/per-sequence/${SeqName[$i]}.cfg $para > ./${SeqName[$i]}_enc_HEVC.log &
         cd $basedir/bin_EI
-        ./TAppEncoderStatic -c ../cfg/encoder_intra_main_LL.cfg -c ../cfg/per-sequence/${SeqName[$i]}.cfg $para > ./${SeqName[$i]}_enc_EI.log &
+        ./TAppEncoderStatic -c ../cfg/encoder_intra_main_LLEI.cfg -c ../cfg/per-sequence/${SeqName[$i]}.cfg $para > ./${SeqName[$i]}_enc_EI.log &
     }&
     done
 else
@@ -33,8 +33,8 @@ else
     {
         echo "Encoding "${SeqName[$i]}
         cd $basedir/bin_HEVC
-        ./TAppEncoderStatic -c ../cfg/encoder_intra_main_LL.cfg -c ../cfg/per-sequence/${SeqName[$i]}.cfg $para > ./${SeqName[$i]}_enc_HEVC.log 
+        ./TAppEncoderStatic -c ../cfg/encoder_intra_main.cfg -c ../cfg/per-sequence/${SeqName[$i]}.cfg $para > ./${SeqName[$i]}_enc_HEVC.log 
         cd $basedir/bin_EI
-        ./TAppEncoderStatic -c ../cfg/encoder_intra_main_LL.cfg -c ../cfg/per-sequence/${SeqName[$i]}.cfg $para > ./${SeqName[$i]}_enc_EI.log 
+        ./TAppEncoderStatic -c ../cfg/encoder_intra_main_LLEI.cfg -c ../cfg/per-sequence/${SeqName[$i]}.cfg $para > ./${SeqName[$i]}_enc_EI.log 
     }
 fi
