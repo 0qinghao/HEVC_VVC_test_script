@@ -9,8 +9,8 @@ test_time=0
 test_few_frames=1
 rdpcm=1
 if [ $test_few_frames -eq 1 ]; then
-    para="--FrameSkip=6 --FramesToBeEncoded=10"
-    # para="--FrameSkip=6 --FramesToBeEncoded=1"
+    # para="--FrameSkip=6 --FramesToBeEncoded=10"
+    para="--FrameSkip=6 --FramesToBeEncoded=1"
     # para="--FrameSkip=6 --FramesToBeEncoded=100"
 else
     para=""
