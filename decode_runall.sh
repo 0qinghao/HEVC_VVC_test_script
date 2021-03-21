@@ -8,7 +8,7 @@ SeqName=(PeopleOnStreet Traffic BasketballDrive BQTerrace Cactus Kimono ParkScen
 
 basedir=`pwd`
 
-test_time=1
+test_time=0
 
 if [ $test_time -eq 0 ]; then
     for i in "${!SeqName[@]}";
