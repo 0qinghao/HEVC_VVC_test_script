@@ -1,101 +1,149 @@
 #!/usr/bin/perl
 @SeqName_list = (
-    PeopleOnStreet,      Traffic,
-    BasketballDrive,     BQTerrace,
-    Cactus,              Kimono,
-    ParkScene,           BasketballDrill,
-    BQMall,              PartyScene,
-    RaceHorsesC,         BasketballPass,
-    BlowingBubbles,      BQSquare,
-    RaceHorses,          FourPeople,
-    Johnny,              KristenAndSara,
+    # PeopleOnStreet,      Traffic,
+
+    # BasketballDrive,     BQTerrace,
+    # Cactus,              Kimono,
+    # ParkScene,           
+
+    BasketballDrill,     BQMall,
+    PartyScene,          RaceHorsesC,
+
+    BasketballPass,      BlowingBubbles,      
+    BQSquare,            RaceHorses,
+    
+    FourPeople,          Johnny,
+    KristenAndSara,
+
     BasketballDrillText, ChinaSpeed,
     SlideEditing,        SlideShow,
-    # FlyingGraphics,
 );
+@QP_list = (22, 27, 32, 37);
 
 open( my $logfile, ">", "hevc_vvc_vvenc.csv");
-# print $logfile "Sequence, HEVC_filesize, HEVC_Time, VVC_filesize, VVC_Time, Ratio_filesize, x_Time\n";
-print $logfile "Sequence, HEVC_filesize, HEVC_Time, VVC_filesize, VVC_Time, vvenc_filesize, vvenc_Time\n";
-# $avg_ratio_bits = 0;
-# $avg_x_time = 0;
+
+print $logfile "HM Part\n";
+print $logfile "Sequence, QP, kbps, Ypsnr, Upsnr, Vpsnr, EncTime\n";
 foreach $SeqName_name (@SeqName_list) {
-    $filename_HEVC = "./bin_HEVC/" . $SeqName_name . "_enc" . "_HEVC.log";
-    $filename_VVC = "./bin_VVC/" . $SeqName_name . "_enc" . "_VVC.log";
-    $filename_vvenc = "./bin_vvenc/" . $SeqName_name . "_enc" . "_vvenc.log";
-    $encfilename_HEVC = "./bin_HEVC/" . $SeqName_name . ".bin";
-    $encfilename_VVC = "./bin_VVC/" . $SeqName_name . ".bin";
-    $encfilename_vvenc = "./bin_vvenc/" . $SeqName_name . ".bin";
-
-    open( f_HEVC, "<", $filename_HEVC ) or die "未找到文件 $filename_HEVC";
-    @lines_HEVC = <f_HEVC>;
-    open( f_VVC, "<", $filename_VVC ) or die "未找到文件 $filename_VVC";
-    @lines_VVC = <f_VVC>;
-    open( f_vvenc, "<", $filename_vvenc ) or die "未找到文件 $filename_vvenc";
-    @lines_vvenc = <f_vvenc>;
-
-    foreach $line_HEVC (@lines_HEVC) {
-        if ( $line_HEVC =~ /(?<=\ Total\ Time:)\s*[\d\.]+/ ) {
-            $enc_time_HEVC = $&;
-            break;
+    foreach $QP (@QP_list) {
+        $logfilename_HM = "./bin_HEVC/" . $SeqName_name . "_qp" . $QP . "_enc" . "_HEVC.log";
+        open( f_HM, "<", $logfilename_HM ) or die "未找到文件 $logfilename_HM";
+        @lines_HM = <f_HM>;
+        foreach $line_HM (@lines_HM) {
+            if ($next_2_line_log == 1)
+            {
+                $next_1_line_log = 1;
+                $next_2_line_log = 0;
+            }
+            if ($line_HM =~ /SUMMARY/ ) {
+                $next_2_line_log = 1;
+            }
+            if ($next_1_line_log == 1) {
+                if ($line_HM =~ /([\d\.]+\s+){4}/ ) {
+                    $HM_kbpsYUVpsnr = $&;
+                    $HM_kbpsYUVpsnr =~ s/\s+/,/g;
+                    # print $HM_kbpsYUVpsnr;
+                    $next_1_line_log = 0;
+                }
+            }
+            elsif ( $line_HM =~ /(?<=\ Total\ Time:)\s*[\d\.]+/ ) {
+                $HM_EncTime = $&;
+                $HM_EncTime =~ s/\s+//g;
+                # print $HM_EncTime;
+                break;
+            }
         }
+        close(f_HM) or die "无法关闭文件 $logfilename_HM";
+        print $logfile $SeqName_name;
+        print $logfile ",";
+        print $logfile $QP;
+        print $logfile ",";
+        print $logfile $HM_kbpsYUVpsnr;
+        print $logfile $HM_EncTime;
+        print $logfile "\n";
     }
-    $filesize_HEVC = (stat($encfilename_HEVC))[7];
-    close(f_HEVC) or die "无法关闭文件 $filename_HEVC";
-
-    foreach $line_VVC (@lines_VVC) {
-        if ( $line_VVC =~ /(?<=\ Total\ Time:)\s*[\d\.]+/ ) {
-            $enc_time_VVC = $&;
-            break;
-        }
-    }
-    $filesize_VVC = (stat($encfilename_VVC))[7];
-    close(f_VVC) or die "无法关闭文件 $filename_VVC";
-
-    foreach $line_vvenc (@lines_vvenc) {
-        if ( $line_vvenc =~ /(?<=\ Total\ Time:)\s*[\d\.]+/ ) {
-            $enc_time_vvenc = $&;
-            break;
-        }
-    }
-    $filesize_vvenc = (stat($encfilename_vvenc))[7];
-    close(f_vvenc) or die "无法关闭文件 $filename_vvenc";
-
-    print $logfile $SeqName_name;
-    print $logfile ",";
-    print $logfile $filesize_HEVC;
-    print $logfile ",";
-    print $logfile $enc_time_HEVC;
-    print $logfile ",";
-    print $logfile $filesize_VVC;
-    print $logfile ",";
-    print $logfile $enc_time_VVC;
-    print $logfile ",";
-    print $logfile $filesize_vvenc;
-    print $logfile ",";
-    print $logfile $enc_time_vvenc;
-    print $logfile ",";
-    # print $logfile ($filesize_VVC - $filesize_HEVC)/$filesize_HEVC*100;
-    # print $logfile ",";
-    # print $logfile $enc_time_VVC/$enc_time_HEVC;
-    # print $logfile ",";
-    print $logfile "\n";
-
-    # $avg_ratio_bits = $avg_ratio_bits + ($filesize_VVC - $filesize_HEVC)/$filesize_HEVC*100/(1+$#{SeqName_list});
-    # $avg_x_time = $avg_x_time + $enc_time_VVC/$enc_time_HEVC/(1+$#{SeqName_list});
 }
-# print $logfile "AVG";
-# print $logfile ",";
-# print $logfile "-";
-# print $logfile ",";
-# print $logfile "-";
-# print $logfile ",";
-# print $logfile "-";
-# print $logfile ",";
-# print $logfile "-";
-# print $logfile ",";
-# print $logfile $avg_ratio_bits;
-# print $logfile ",";
-# print $logfile $avg_x_time;
-# print $logfile ",";
+
+print $logfile "VTM Part\n";
+print $logfile "Sequence, QP, kbps, Ypsnr, Upsnr, Vpsnr, EncTime\n";
+foreach $SeqName_name (@SeqName_list) {
+    foreach $QP (@QP_list) {
+        $logfilename_VTM = "./bin_VVC/" . $SeqName_name . "_qp" . $QP . "_enc" . "_VVC.log";
+        open( f_VTM, "<", $logfilename_VTM ) or die "未找到文件 $logfilename_VTM";
+        @lines_VTM = <f_VTM>;
+        foreach $line_VTM (@lines_VTM) {
+            if ($next_2_line_log == 1)
+            {
+                $next_1_line_log = 1;
+                $next_2_line_log = 0;
+            }
+            if ($line_VTM =~ /LayerId\s{2}0/ ) {
+                $next_2_line_log = 1;
+            }
+            if ($next_1_line_log == 1) {
+                if ($line_VTM =~ /([\d\.]+\s+){4}/ ) {
+                    $VTM_kbpsYUVpsnr = $&;
+                    $VTM_kbpsYUVpsnr =~ s/\s+/,/g;
+                    # print $VTM_kbpsYUVpsnr;
+                    $next_1_line_log = 0;
+                }
+            }
+            elsif ( $line_VTM =~ /(?<=\ Total\ Time:)\s*[\d\.]+/ ) {
+                $VTM_EncTime = $&;
+                $VTM_EncTime =~ s/\s+//g;
+                # print $VTM_EncTime;
+                break;
+            }
+        }
+        close(f_VTM) or die "无法关闭文件 $logfilename_VTM";
+        print $logfile $SeqName_name;
+        print $logfile ",";
+        print $logfile $QP;
+        print $logfile ",";
+        print $logfile $VTM_kbpsYUVpsnr;
+        print $logfile $VTM_EncTime;
+        print $logfile "\n";
+    }
+}
+
+@vvenc_level_list = (slow, medium, fast, faster);
+foreach $vvenc_level (@vvenc_level_list) {
+    print $logfile "VVenC " . $vvenc_level . " Part\n";
+    print $logfile "Sequence, QP, kbps, Ypsnr, Upsnr, Vpsnr, EncTime\n";
+    foreach $SeqName_name (@SeqName_list) {
+        foreach $QP (@QP_list) {
+            $logfilename_VVenC = "./bin_vvenc/" . $SeqName_name . "_qp" . $QP . "_" . $vvenc_level . "_enc" . "_vvenc.log";
+            open( f_VVenC, "<", $logfilename_VVenC ) or die "未找到文件 $logfilename_VVenC";
+            @lines_VVenC = <f_VVenC>;
+            foreach $line_VVenC (@lines_VVenC) {
+                if ($line_VVenC =~ /Total Frames/ ) {
+                    $next_1_line_log = 1;
+                }
+                if ($next_1_line_log == 1) {
+                    if ($line_VVenC =~ /([\d\.]+\s+){4}/ ) {
+                        $VVenC_kbpsYUVpsnr = $&;
+                        $VVenC_kbpsYUVpsnr =~ s/\s+/,/g;
+                        # print $VVenC_kbpsYUVpsnr;
+                        $next_1_line_log = 0;
+                    }
+                }
+                elsif ( $line_VVenC =~ /(?<=\ Total\ Time:)\s*[\d\.]+/ ) {
+                    $VVenC_EncTime = $&;
+                    $VVenC_EncTime =~ s/\s+//g;
+                    # print $VVenC_EncTime;
+                    break;
+                }
+            }
+            close(f_VVenC) or die "无法关闭文件 $logfilename_VVenC";
+            print $logfile $SeqName_name;
+            print $logfile ",";
+            print $logfile $QP;
+            print $logfile ",";
+            print $logfile $VVenC_kbpsYUVpsnr;
+            print $logfile $VVenC_EncTime;
+            print $logfile "\n";
+        }
+    }
+}
+
 close(logfile);
