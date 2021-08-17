@@ -1,17 +1,20 @@
 #!/usr/bin/perl
+# @SeqName_list = (
+#     # Tango2,              FoodMarket4,
+#     PeopleOnStreet,      Traffic,
+#     BasketballDrive,     BQTerrace,
+#     Cactus,              Kimono,
+#     ParkScene,           BasketballDrill,
+#     BQMall,              PartyScene,
+#     RaceHorsesC,         BasketballPass,
+#     BlowingBubbles,      BQSquare,
+#     RaceHorses,          FourPeople,
+#     Johnny,              KristenAndSara,
+#     BasketballDrillText, ChinaSpeed,
+#     SlideEditing,        SlideShow,
+# );
 @SeqName_list = (
-    Tango2,              FoodMarket4,
-    PeopleOnStreet,      Traffic,
-    BasketballDrive,     BQTerrace,
-    Cactus,              Kimono,
-    ParkScene,           BasketballDrill,
-    BQMall,              PartyScene,
-    RaceHorsesC,         BasketballPass,
-    BlowingBubbles,      BQSquare,
-    RaceHorses,          FourPeople,
-    Johnny,              KristenAndSara,
-    BasketballDrillText, ChinaSpeed,
-    SlideEditing,        SlideShow,
+   Vidyo1, Vidyo3, Vidyo4, 
 );
 # @SeqName_list = (
 #     BasketballPass,
