@@ -1,25 +1,23 @@
 #!/usr/bin/perl
-# @SeqName_list = (
-#     # Tango2,              FoodMarket4,
-#     PeopleOnStreet,      Traffic,
-#     BasketballDrive,     BQTerrace,
-#     Cactus,              Kimono,
-#     ParkScene,           BasketballDrill,
-#     BQMall,              PartyScene,
-#     RaceHorsesC,         BasketballPass,
-#     BlowingBubbles,      BQSquare,
-#     RaceHorses,          FourPeople,
-#     Johnny,              KristenAndSara,
-#     BasketballDrillText, ChinaSpeed,
-#     SlideEditing,        SlideShow,
-# );
 @SeqName_list = (
-   Vidyo1, Vidyo3, Vidyo4, 
+    Tango, Campfire, FoodMarket4, 
+    DaylightRoad2, ParkRunning3, CatRobot,
+    PeopleOnStreet,      Traffic,
+    BasketballDrive,     BQTerrace,
+    Cactus,              Kimono,
+    ParkScene,           BasketballDrill,
+    BQMall,              PartyScene,
+    RaceHorsesC,         BasketballPass,
+    BlowingBubbles,      BQSquare,
+    RaceHorses,          FourPeople,
+    Johnny,              KristenAndSara,
+    Vidyo1, Vidyo3, Vidyo4, 
+    BasketballDrillText, ChinaSpeed,
+    SlideEditing,        SlideShow,
 );
 # @SeqName_list = (
-#     BasketballPass,
-#     BlowingBubbles,      BQSquare,
-#     SlideEditing,        SlideShow,
+#     Tango, Campfire, FoodMarket4, 
+#     DaylightRoad2, ParkRunning3, CatRobot,
 # );
 
 open( my $logfile, ">", "vtm_src_lip.csv");
@@ -27,7 +25,7 @@ print $logfile "Sequence, src_filesize, src_Time, lip_filesize, lip_Time, Ratio_
 $avg_ratio_bits = 0;
 $avg_x_time = 0;
 foreach $SeqName_name (@SeqName_list) {
-    print $SeqName_name;
+    print $SeqName_name ;
     $filename_VVC_lip = "./bin_VVC_lip/" . $SeqName_name . "_enc" . "_VVC_lip.log";
     $filename_VVC_src = "./bin_VVC_src/" . $SeqName_name . "_enc" . "_VVC_src.log";
     $encfilename_VVC_lip = "./bin_VVC_lip/" . $SeqName_name . ".bin";
