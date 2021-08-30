@@ -1,11 +1,11 @@
 #!/usr/bin/perl
 @SeqName_list = (
-    Tango, Campfire, FoodMarket4, 
-    DaylightRoad2, ParkRunning3, CatRobot,
-    PeopleOnStreet,      Traffic,
-    BasketballDrive,     BQTerrace,
-    Cactus,              Kimono,
-    ParkScene,           BasketballDrill,
+    # Tango, Campfire, FoodMarket4, 
+    # DaylightRoad2, ParkRunning3, CatRobot,
+    # PeopleOnStreet,      Traffic,
+    # BasketballDrive,     BQTerrace,
+    # Cactus,              Kimono,
+      BasketballDrill,
     BQMall,              PartyScene,
     RaceHorsesC,         BasketballPass,
     BlowingBubbles,      BQSquare,

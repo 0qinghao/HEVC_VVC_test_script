@@ -6,7 +6,8 @@
 # SeqName=(PeopleOnStreet Traffic BasketballDrive BQTerrace Cactus Kimono ParkScene BasketballDrill BQMall PartyScene RaceHorsesC BasketballPass BlowingBubbles BQSquare RaceHorses FourPeople Johnny KristenAndSara BasketballDrillText ChinaSpeed SlideEditing SlideShow)
 # SeqName=(Vidyo1 Vidyo3 Vidyo4)
 # SeqName=(PeopleOnStreet Traffic BasketballDrive BQTerrace Cactus Kimono ParkScene BasketballDrill BQMall PartyScene RaceHorsesC BasketballPass BlowingBubbles BQSquare RaceHorses FourPeople Johnny KristenAndSara Vidyo1 Vidyo3 Vidyo4 BasketballDrillText ChinaSpeed SlideEditing SlideShow)
-SeqName=(Tango FoodMarket4 Campfire CatRobot DaylightRoad2 ParkRunning3)
+SeqName=(BasketballDrill BQMall PartyScene RaceHorsesC BasketballPass BlowingBubbles BQSquare RaceHorses FourPeople Johnny KristenAndSara Vidyo1 Vidyo3 Vidyo4 BasketballDrillText ChinaSpeed SlideEditing SlideShow)
+# SeqName=(Tango FoodMarket4 Campfire CatRobot DaylightRoad2 ParkRunning3)
 # SeqName=(BasketballPass BlowingBubbles BQSquare SlideEditing SlideShow)
 # SeqName=(SlideEditing SlideShow FlyingGraphics)
 
